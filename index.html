@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌦️ Weather App</h1>
+            <p>Check weather anywhere in the world</p>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button onclick="searchWeather()"><i class="fas fa-search"></i></button>
+            <button onclick="getLocation()" class="loc-btn"><i class="fas fa-location-arrow"></i></button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <i class="fas fa-spinner fa-spin"></i> Loading...
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div id="weather-card" class="weather-card hidden">
+            <div class="city-name" id="city-name">--</div>
+            <div class="date" id="date">--</div>
+            
+            <div class="main-weather">
+                <img id="weather-icon" src="" alt="weather">
+                <div class="temperature" id="temp">--°C</div>
+                <div class="condition" id="condition">--</div>
+            </div>
+
+            <div class="details">
+                <div class="detail-box">
+                    <i class="fas fa-temperature-high"></i>
+                    <span>Feels Like</span>
+                    <strong id="feels-like">--°C</strong>
+                </div>
+                <div class="detail-box">
+                    <i class="fas fa-tint"></i>
+                    <span>Humidity</span>
+                    <strong id="humidity">--%</strong>
+                </div>
+                <div class="detail-box">
+                    <i class="fas fa-wind"></i>
+                    <span>Wind Speed</span>
+                    <strong id="wind">-- km/h</strong>
+                </div>
+                <div class="detail-box">
+                    <i class="fas fa-eye"></i>
+                    <span>Visibility</span>
+                    <strong id="visibility">-- km</strong>
+                </div>
+            </div>
+        </div>
+
+        <div id="forecast-section" class="forecast-section hidden">
+            <h3>📅 5-Day Forecast</h3>
+            <div class="forecast-container" id="forecast-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
