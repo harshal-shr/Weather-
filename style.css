@@ -4,13 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
-    min-height: 100vh;
-    color: #fff;
-    padding: 20px;
-}
 
 .container {
     max-width: 600px;
